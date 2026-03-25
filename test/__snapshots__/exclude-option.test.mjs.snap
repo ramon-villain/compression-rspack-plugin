@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`"exclude" option matches snapshot for a single \`exclude\` value ({RegExp}): assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.js?ver=[hash]",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "main.js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.js?var=[hash]",
+    10098,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"exclude" option matches snapshot for a single \`exclude\` value ({RegExp}): errors 1`] = `[]`;
+
+exports[`"exclude" option matches snapshot for a single \`exclude\` value ({RegExp}): warnings 1`] = `[]`;
+
+exports[`"exclude" option matches snapshot for multiple \`exclude\` values ({Array<RegExp>}): assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "async.async.js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.js?ver=[hash]",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "main.js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.js?var=[hash]",
+    10098,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"exclude" option matches snapshot for multiple \`exclude\` values ({Array<RegExp>}): errors 1`] = `[]`;
+
+exports[`"exclude" option matches snapshot for multiple \`exclude\` values ({Array<RegExp>}): warnings 1`] = `[]`;

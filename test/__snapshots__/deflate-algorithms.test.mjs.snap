@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`"deflate" and "deflateRaw" algorithms should work with "deflate" algorithm (native Rust): assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"deflate" and "deflateRaw" algorithms should work with "deflate" algorithm (native Rust): errors 1`] = `[]`;
+
+exports[`"deflate" and "deflateRaw" algorithms should work with "deflate" algorithm (native Rust): warnings 1`] = `[]`;
+
+exports[`"deflate" and "deflateRaw" algorithms should work with "deflateRaw" algorithm (native Rust): assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"deflate" and "deflateRaw" algorithms should work with "deflateRaw" algorithm (native Rust): errors 1`] = `[]`;
+
+exports[`"deflate" and "deflateRaw" algorithms should work with "deflateRaw" algorithm (native Rust): warnings 1`] = `[]`;

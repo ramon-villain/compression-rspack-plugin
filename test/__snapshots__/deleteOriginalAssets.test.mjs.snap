@@ -1,0 +1,544 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`"deleteOriginalAssets" option should delete original assets and keep source maps with option "keep-source-map": assets 1`] = `
+[
+  [
+    "async.async.[hash].js.map",
+    239,
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "contenthash": [],
+      "development": true,
+      "fullhash": [],
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "main.[hash].js.map",
+    10318,
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "contenthash": [],
+      "development": true,
+      "fullhash": [],
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"deleteOriginalAssets" option should delete original assets and keep source maps with option "keep-source-map": errors 1`] = `
+[
+  "Error:   × Conflict: Multiple assets emit different content to the same filename [hash].png
+",
+  "Error:   × Conflict: Multiple assets emit different content to the same filename async.async.[hash].js
+",
+  "Error:   × Conflict: Multiple assets emit different content to the same filename main.[hash].js
+",
+]
+`;
+
+exports[`"deleteOriginalAssets" option should delete original assets and keep source maps with option "keep-source-map": warnings 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and delete original assets when function used: assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"deleteOriginalAssets" option should work and delete original assets when function used: errors 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and delete original assets when function used: warnings 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and delete original assets: assets 1`] = `
+[
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"deleteOriginalAssets" option should work and delete original assets: errors 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and delete original assets: warnings 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and do not report errors on duplicate assets when original assets were removed: assets 1`] = `
+[
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+]
+`;
+
+exports[`"deleteOriginalAssets" option should work and do not report errors on duplicate assets when original assets were removed: errors 1`] = `
+[
+  "Error:   × Conflict: Multiple assets emit different content to the same filename [hash].png
+",
+  "Error:   × Conflict: Multiple assets emit different content to the same filename async.async.[hash].js
+",
+  "Error:   × Conflict: Multiple assets emit different content to the same filename main.[hash].js
+",
+]
+`;
+
+exports[`"deleteOriginalAssets" option should work and do not report errors on duplicate assets when original assets were removed: warnings 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and keep original assets by default: assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"deleteOriginalAssets" option should work and keep original assets by default: errors 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and keep original assets by default: warnings 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and keep original assets: assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"deleteOriginalAssets" option should work and keep original assets: errors 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and keep original assets: warnings 1`] = `[]`;
+
+exports[`"deleteOriginalAssets" option should work and report errors on duplicate assets: assets 1`] = `
+[
+  [
+    "[hash].png",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "main.[hash].js",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"deleteOriginalAssets" option should work and report errors on duplicate assets: errors 1`] = `
+[
+  "Error:   × Conflict: Multiple assets emit different content to the same filename [hash].png
+",
+  "Error:   × Conflict: Multiple assets emit different content to the same filename async.async.[hash].js
+",
+  "Error:   × Conflict: Multiple assets emit different content to the same filename main.[hash].js
+",
+]
+`;
+
+exports[`"deleteOriginalAssets" option should work and report errors on duplicate assets: warnings 1`] = `[]`;

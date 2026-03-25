@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`"threshold" option matches snapshot for \`0\` value ({Number}): assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"threshold" option matches snapshot for \`0\` value ({Number}): errors 1`] = `[]`;
+
+exports[`"threshold" option matches snapshot for \`0\` value ({Number}): warnings 1`] = `[]`;
+
+exports[`"threshold" option matches snapshot for \`8192\` value ({Number}): assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"threshold" option matches snapshot for \`8192\` value ({Number}): errors 1`] = `[]`;
+
+exports[`"threshold" option matches snapshot for \`8192\` value ({Number}): warnings 1`] = `[]`;
+
+exports[`"threshold" option should compress all assets excluding assets with "0" bytes original size: assets 1`] = `
+[
+  [
+    "[hash].txt",
+    0,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "empty.txt",
+    },
+  ],
+  [
+    "[hash].txt.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    3910,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"threshold" option should compress all assets excluding assets with "0" bytes original size: errors 1`] = `[]`;
+
+exports[`"threshold" option should compress all assets excluding assets with "0" bytes original size: warnings 1`] = `[]`;
+
+exports[`"threshold" option should compress all assets including assets with "0" bytes original size: assets 1`] = `
+[
+  [
+    "[hash].txt",
+    0,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "empty.txt",
+    },
+  ],
+  [
+    "[hash].txt.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    3910,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"threshold" option should compress all assets including assets with "0" bytes original size: errors 1`] = `[]`;
+
+exports[`"threshold" option should compress all assets including assets with "0" bytes original size: warnings 1`] = `[]`;

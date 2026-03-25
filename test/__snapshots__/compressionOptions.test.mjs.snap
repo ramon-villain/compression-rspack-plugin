@@ -1,0 +1,714 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`"compressionOptions" option matches snapshot for custom options ({Object}): assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"compressionOptions" option matches snapshot for custom options ({Object}): errors 1`] = `[]`;
+
+exports[`"compressionOptions" option matches snapshot for custom options ({Object}): warnings 1`] = `[]`;
+
+exports[`"compressionOptions" option matches snapshot without values: assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"compressionOptions" option matches snapshot without values: errors 1`] = `[]`;
+
+exports[`"compressionOptions" option matches snapshot without values: warnings 1`] = `[]`;
+
+exports[`"compressionOptions" option set default compression level to maximum for brotli: assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.br",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.br",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.br",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.br",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"compressionOptions" option set default compression level to maximum for brotli: errors 1`] = `[]`;
+
+exports[`"compressionOptions" option set default compression level to maximum for brotli: warnings 1`] = `[]`;
+
+exports[`"compressionOptions" option set default compression level to maximum for deflate: assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"compressionOptions" option set default compression level to maximum for deflate: errors 1`] = `[]`;
+
+exports[`"compressionOptions" option set default compression level to maximum for deflate: warnings 1`] = `[]`;
+
+exports[`"compressionOptions" option set default compression level to maximum for deflateRaw: assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "[hash].svg.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"compressionOptions" option set default compression level to maximum for deflateRaw: errors 1`] = `[]`;
+
+exports[`"compressionOptions" option set default compression level to maximum for deflateRaw: warnings 1`] = `[]`;
+
+exports[`"compressionOptions" option set default compression level to maximum for gzip: assets 1`] = `
+[
+  [
+    "[hash].png",
+    10069,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.png",
+    },
+  ],
+  [
+    "[hash].png.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js",
+    438,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "async.async.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+  [
+    "[hash].svg",
+    235,
+    {
+      "assetType": "asset",
+      "chunkhash": [],
+      "contenthash": [],
+      "fullhash": [
+        "[hash]",
+      ],
+      "immutable": true,
+      "related": {},
+      "sourceFilename": "icon.svg",
+    },
+  ],
+  [
+    "main.[hash].js",
+    10094,
+    {
+      "assetType": "javascript",
+      "chunkhash": [],
+      "contenthash": [
+        "[hash]",
+      ],
+      "fullhash": [],
+      "immutable": true,
+      "javascriptModule": false,
+      "related": {},
+    },
+  ],
+  [
+    "main.[hash].js.gz",
+    "<compressed>",
+    {
+      "assetType": "unknown",
+      "chunkhash": [],
+      "compressed": true,
+      "contenthash": [],
+      "fullhash": [],
+      "immutable": true,
+      "related": {},
+    },
+  ],
+]
+`;
+
+exports[`"compressionOptions" option set default compression level to maximum for gzip: errors 1`] = `[]`;
+
+exports[`"compressionOptions" option set default compression level to maximum for gzip: warnings 1`] = `[]`;
