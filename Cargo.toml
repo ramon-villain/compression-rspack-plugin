@@ -1,0 +1,28 @@
+[package]
+name = "compression-rspack-plugin"
+version = "0.1.0"
+edition = "2021"
+description = "Rust-native parallel gzip & brotli compression plugin for Rspack"
+license = "MIT"
+repository = "https://github.com/ramon-villain/compression-rspack-plugin"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+flate2 = "1.1"
+brotli = "8.0"
+rayon = { version = "1.11.0", default-features = false }
+napi = { version = "3.8.3", features = ["napi8"] }
+napi-derive = { version = "3.5.2" }
+
+[build-dependencies]
+napi-build = { version = "2.3.1", default-features = false }
+
+[profile.dev]
+incremental = true
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+strip = "symbols"
