@@ -1,0 +1,87 @@
+{
+  "name": "compression-rspack-plugin",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Rust-native parallel compression plugin for Rspack. Drop-in replacement for compression-webpack-plugin with gzip, brotli, deflate, and deflateRaw — all parallelized across CPU cores via Rust + rayon.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "index.cjs",
+    "index.d.cts",
+    "*.node"
+  ],
+  "napi": {
+    "binaryName": "compression-rspack-plugin",
+    "targets": [
+      "aarch64-apple-darwin",
+      "x86_64-apple-darwin",
+      "x86_64-unknown-linux-gnu",
+      "aarch64-unknown-linux-gnu",
+      "x86_64-unknown-linux-musl"
+    ]
+  },
+  "scripts": {
+    "build:native": "napi build --platform --release",
+    "build:ts": "tsc -p tsconfig.build.json && cp lib/options.json dist/options.json",
+    "build": "pnpm build:native && pnpm build:ts",
+    "clean": "rm -rf dist",
+    "test:rust": "cargo test --lib",
+    "pretest": "pnpm build:ts",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "test:update": "NODE_OPTIONS='--experimental-vm-modules' jest -u",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "lint:rs": "cargo fmt --check && cargo clippy --lib -- -D warnings",
+    "prepublishOnly": "pnpm clean && pnpm build"
+  },
+  "keywords": [
+    "rspack",
+    "rspack-plugin",
+    "compression",
+    "gzip",
+    "brotli",
+    "deflate",
+    "rust",
+    "napi",
+    "parallel",
+    "performance"
+  ],
+  "author": "ramon-villain",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramon-villain/compression-rspack-plugin.git"
+  },
+  "packageManager": "pnpm@10.8.1",
+  "engines": {
+    "node": ">=24"
+  },
+  "peerDependencies": {
+    "@rspack/core": ">=1.0.0"
+  },
+  "dependencies": {
+    "p-limit": "7.3.0",
+    "schema-utils": "4.3.2",
+    "serialize-javascript": "7.0.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.9",
+    "@napi-rs/cli": "3.0.0-alpha.86",
+    "@rspack/core": "2.0.0-beta.2",
+    "@types/node": "24.11.0",
+    "@types/serialize-javascript": "5.0.4",
+    "browserslist-load-config": "1.0.1",
+    "jest": "30.0.0-alpha.6",
+    "memfs": "4.17.0",
+    "typescript": "6.0.2",
+    "webpack-stats-plugin": "1.1.3"
+  }
+}
