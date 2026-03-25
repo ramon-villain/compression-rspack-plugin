@@ -1,0 +1,12 @@
+target/
+node_modules/
+dist/
+*.node
+*.tgz
+Cargo.lock
+package-lock.json
+coverage/
+.idea/
+.tool-versions
+index.d.ts
+index.js
