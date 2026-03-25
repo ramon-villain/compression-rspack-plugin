@@ -1,0 +1,5 @@
+This is a text file used for testing compression of various asset types.
+It contains enough content to be meaningfully compressible by both gzip and brotli algorithms.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+laboris nisi ut aliquip ex ea commodo consequat.
