@@ -61,7 +61,7 @@ Built-in algorithms (`gzip`, `brotliCompress`, `deflate`, `deflateRaw`) are hand
 | | compression-webpack-plugin | compression-rspack-plugin |
 |---|---|---|
 | Compression | Node.js zlib (serial) | Rust rayon (parallel) + zlib fallback |
-| Compilation cache | Yes | Yes |
+| Compilation cache | Yes | Not yet |
 | Child compilations | Yes (scoped via `thisCompilation`) | Yes |
 | `[compressed]` stats flag | Yes | Registered, not rendered by rspack 2.0 beta |
 

@@ -11,8 +11,8 @@ use rayon::prelude::*;
 
 #[napi(object)]
 pub struct AssetInput {
-  pub filename: String,
-  pub content: Buffer,
+  pub name: String,
+  pub buffer: Buffer,
 }
 
 #[napi(object)]
@@ -23,8 +23,8 @@ pub struct CompressOptions {
 
 #[napi(object)]
 pub struct CompressedAsset {
-  pub filename: String,
-  pub content: Buffer,
+  pub name: String,
+  pub buffer: Buffer,
   pub algorithm: String,
   pub original_size: u32,
   pub compressed_size: u32,
@@ -128,14 +128,14 @@ fn compress_all(
   assets
     .into_par_iter()
     .map(|asset| {
-      let content: &[u8] = &asset.content;
+      let content: &[u8] = &asset.buffer;
       let original_size = u32::try_from(content.len()).unwrap_or(u32::MAX);
       let compressed = algo.compress(content, level, &brotli_params)?;
       let compressed_size = u32::try_from(compressed.len()).unwrap_or(u32::MAX);
 
       Ok(CompressedAsset {
-        filename: asset.filename,
-        content: compressed.into(),
+        name: asset.name,
+        buffer: compressed.into(),
         algorithm: algo_name.to_string(),
         original_size,
         compressed_size,
