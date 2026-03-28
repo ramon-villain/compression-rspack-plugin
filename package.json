@@ -17,8 +17,7 @@
     "dist/helpers.*",
     "dist/compressors/",
     "dist/options.json",
-    "index.cjs",
-    "index.d.cts"
+    "index.cjs"
   ],
   "napi": {
     "binaryName": "compression-rspack-plugin",
