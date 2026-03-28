@@ -41,7 +41,8 @@
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "lint:rs": "cargo fmt --check && cargo clippy --lib -- -D warnings",
-    "prepublishOnly": "pnpm clean && pnpm build"
+    "prepublishOnly": "pnpm clean && pnpm build",
+    "prepare": "husky"
   },
   "keywords": [
     "rspack",
@@ -88,6 +89,7 @@
     "@types/jest": "30.0.0",
     "@types/node": "24.12.0",
     "browserslist-load-config": "1.0.1",
+    "husky": "9.1.7",
     "jest": "30.3.0",
     "memfs": "4.57.1",
     "typescript": "6.0.2",

@@ -7,7 +7,7 @@ import getErrors from "./helpers/getErrors.ts";
 import getWarnings from "./helpers/getWarnings.ts";
 
 describe('"minRatio" option', () => {
-  let compiler;
+  let compiler: ReturnType<typeof getCompiler>;
 
   beforeEach(() => {
     compiler = getCompiler("./entry.js");

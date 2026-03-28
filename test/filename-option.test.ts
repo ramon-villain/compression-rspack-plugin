@@ -12,7 +12,7 @@ import getWarnings from "./helpers/getWarnings.ts";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 describe('"filename" option', () => {
-  let compiler;
+  let compiler: ReturnType<typeof getCompiler>;
 
   it("should work", async () => {
     compiler = getCompiler(

@@ -1,5 +1,11 @@
 import zlib from "node:zlib";
-
+import { compressNativeBinding } from "../lib/compressors/native.ts";
+import {
+  getBuffer,
+  hasImmutablePlaceholder,
+  resolveRelatedName,
+  shouldDeleteOriginal,
+} from "../lib/helpers.ts";
 import { CompressionRspackPlugin } from "../lib/index.ts";
 
 import compile from "./helpers/compile.ts";
@@ -67,5 +73,55 @@ describe("edge cases", () => {
 
     expect(zstFiles.length).toBeGreaterThan(0);
     expect(getErrors(stats)).toHaveLength(0);
+  });
+
+  it("getBuffer falls back to source() when buffer() is not available", () => {
+    const fakeAsset = {
+      name: "test.js",
+      source: {
+        source: () => "console.log('hello')",
+        size: () => 20,
+      },
+      info: {},
+    };
+    // biome-ignore lint/suspicious/noExplicitAny: testing with a minimal mock
+    const result = getBuffer(fakeAsset as any);
+    expect(Buffer.isBuffer(result)).toBe(true);
+    expect(result.toString()).toBe("console.log('hello')");
+  });
+
+  it("resolveRelatedName handles function algorithm + function filename", () => {
+    const name = resolveRelatedName(
+      (_input: Buffer, _opts: Record<string, unknown>, cb: (err: null, result: Buffer) => void) =>
+        cb(null, Buffer.from("")),
+      (_pathData: { filename: string }) => "custom.gz",
+    );
+    expect(name).toMatch(/^compression-function-[a-f0-9]+$/);
+  });
+
+  it("shouldDeleteOriginal with function policy", () => {
+    expect(shouldDeleteOriginal((name: string) => name.endsWith(".js"), "main.js")).toBe(true);
+    expect(shouldDeleteOriginal((name: string) => name.endsWith(".js"), "main.css")).toBe(false);
+  });
+
+  it("hasImmutablePlaceholder returns false for function templates", () => {
+    expect(hasImmutablePlaceholder(() => "test")).toBe(false);
+  });
+
+  it("compressNativeBinding throws for non-string algorithm", () => {
+    expect(() => {
+      // biome-ignore lint/suspicious/noExplicitAny: testing invalid input
+      compressNativeBinding((() => {}) as any, {});
+    }).toThrow("Algorithm is not a string");
+  });
+
+  it("compressNativeBinding handles brotli without quality param", () => {
+    const compress = compressNativeBinding("brotliCompress", { params: {} });
+    expect(typeof compress).toBe("function");
+  });
+
+  it("compressNativeBinding handles brotli with non-object params", () => {
+    const compress = compressNativeBinding("brotliCompress", { params: "invalid" });
+    expect(typeof compress).toBe("function");
   });
 });
