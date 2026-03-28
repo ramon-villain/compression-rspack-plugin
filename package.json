@@ -1,6 +1,6 @@
 {
   "name": "compression-rspack-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "Rust-native parallel compression plugin for Rspack. Drop-in replacement for compression-webpack-plugin with gzip, brotli, deflate, and deflateRaw — all parallelized across CPU cores via Rust + rayon.",
   "main": "dist/index.js",
@@ -70,11 +70,11 @@
     "@rspack/core": ">=1.0.0"
   },
   "optionalDependencies": {
-    "compression-rspack-plugin-darwin-arm64": "0.1.1",
-    "compression-rspack-plugin-darwin-x64": "0.1.1",
-    "compression-rspack-plugin-linux-x64-gnu": "0.1.1",
-    "compression-rspack-plugin-linux-arm64-gnu": "0.1.1",
-    "compression-rspack-plugin-linux-x64-musl": "0.1.1"
+    "compression-rspack-plugin-darwin-arm64": "0.1.2",
+    "compression-rspack-plugin-darwin-x64": "0.1.2",
+    "compression-rspack-plugin-linux-x64-gnu": "0.1.2",
+    "compression-rspack-plugin-linux-arm64-gnu": "0.1.2",
+    "compression-rspack-plugin-linux-x64-musl": "0.1.2"
   },
   "dependencies": {
     "p-limit": "7.3.0",
