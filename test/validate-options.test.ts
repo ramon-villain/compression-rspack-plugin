@@ -1,4 +1,4 @@
-import { CompressionRspackPlugin } from "../dist/index.js";
+import { CompressionRspackPlugin } from "../lib/index.ts";
 
 describe("validate options", () => {
   const tests = {

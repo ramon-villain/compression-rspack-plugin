@@ -4,17 +4,17 @@ import zlib from "node:zlib";
 
 import { StatsWriterPlugin } from "webpack-stats-plugin";
 
-import { CompressionRspackPlugin } from "../dist/index.js";
+import { CompressionRspackPlugin } from "../lib/index.ts";
 
-import ChildCompilationPlugin from "./helpers/ChildCompilationPlugin.mjs";
-import CopyPluginWithAssetInfo from "./helpers/CopyPluginWithAssetInfo.mjs";
-import compile from "./helpers/compile.mjs";
-import EmitNewAsset from "./helpers/EmitNewAsset.mjs";
-import getAssetsNameAndSize from "./helpers/getAssetsNameAndSize.mjs";
-import getCompiler from "./helpers/getCompiler.mjs";
-import getErrors from "./helpers/getErrors.mjs";
-import getWarnings from "./helpers/getWarnings.mjs";
-import ModifyExistingAsset from "./helpers/ModifyExistingAsset.mjs";
+import ChildCompilationPlugin from "./helpers/ChildCompilationPlugin.ts";
+import CopyPluginWithAssetInfo from "./helpers/CopyPluginWithAssetInfo.ts";
+import compile from "./helpers/compile.ts";
+import EmitNewAsset from "./helpers/EmitNewAsset.ts";
+import getAssetsNameAndSize from "./helpers/getAssetsNameAndSize.ts";
+import getCompiler from "./helpers/getCompiler.ts";
+import getErrors from "./helpers/getErrors.ts";
+import getWarnings from "./helpers/getWarnings.ts";
+import ModifyExistingAsset from "./helpers/ModifyExistingAsset.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

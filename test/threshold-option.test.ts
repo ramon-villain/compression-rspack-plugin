@@ -1,36 +1,22 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { CompressionRspackPlugin } from "../lib/index.ts";
 
-import { CompressionRspackPlugin } from "../dist/index.js";
+import compile from "./helpers/compile.ts";
+import getAssetsNameAndSize from "./helpers/getAssetsNameAndSize.ts";
+import getCompiler from "./helpers/getCompiler.ts";
+import getErrors from "./helpers/getErrors.ts";
+import getWarnings from "./helpers/getWarnings.ts";
 
-import compile from "./helpers/compile.mjs";
-import getAssetsNameAndSize from "./helpers/getAssetsNameAndSize.mjs";
-import getCompiler from "./helpers/getCompiler.mjs";
-import getErrors from "./helpers/getErrors.mjs";
-import getWarnings from "./helpers/getWarnings.mjs";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-describe('"test" option', () => {
+describe('"threshold" option', () => {
   let compiler;
 
   beforeEach(() => {
-    compiler = getCompiler(
-      "./entry.js",
-      {},
-      {
-        output: {
-          path: path.join(__dirname, "./dist"),
-          filename: "[name].js?var=[contenthash]",
-          chunkFilename: "[id].[name].js?ver=[contenthash]",
-        },
-      },
-    );
+    compiler = getCompiler("./entry.js");
   });
 
-  it("matches snapshot with empty `test` value", async () => {
+  it("matches snapshot for `0` value ({Number})", async () => {
     new CompressionRspackPlugin({
       minRatio: 1,
+      threshold: 0,
     }).apply(compiler);
 
     const stats = await compile(compiler);
@@ -40,10 +26,10 @@ describe('"test" option', () => {
     expect(getErrors(stats)).toMatchSnapshot("errors");
   });
 
-  it("matches snapshot for a single `test` value ({RegExp})", async () => {
+  it("matches snapshot for `8192` value ({Number})", async () => {
     new CompressionRspackPlugin({
-      test: /\.(png|jpg|gif)$/i,
       minRatio: 1,
+      threshold: 8192,
     }).apply(compiler);
 
     const stats = await compile(compiler);
@@ -53,10 +39,12 @@ describe('"test" option', () => {
     expect(getErrors(stats)).toMatchSnapshot("errors");
   });
 
-  it("matches snapshot for multiple `test` values ({Array<RegExp>})", async () => {
+  it('should compress all assets including assets with "0" bytes original size', async () => {
+    compiler = getCompiler("./empty.js");
+
     new CompressionRspackPlugin({
-      test: [/\.(png|jpg|gif)$/i, /\.svg/i],
-      minRatio: 1,
+      minRatio: Infinity,
+      threshold: 0,
     }).apply(compiler);
 
     const stats = await compile(compiler);
@@ -66,10 +54,12 @@ describe('"test" option', () => {
     expect(getErrors(stats)).toMatchSnapshot("errors");
   });
 
-  it("should work when no asset to compress", async () => {
+  it('should compress all assets excluding assets with "0" bytes original size', async () => {
+    compiler = getCompiler("./empty.js");
+
     new CompressionRspackPlugin({
-      test: /\.(unknown)$/i,
-      minRatio: 1,
+      minRatio: Number.MAX_SAFE_INTEGER,
+      threshold: 0,
     }).apply(compiler);
 
     const stats = await compile(compiler);

@@ -1,6 +1,6 @@
 import zlib from "node:zlib";
 
-import readAsset from "./readAsset.mjs";
+import readAsset from "./readAsset.ts";
 
 const HASH_RE = /[a-f0-9]{16,}/g;
 

@@ -1,17 +1,17 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { CompressionRspackPlugin } from "../dist/index.js";
+import { CompressionRspackPlugin } from "../lib/index.ts";
 
-import compile from "./helpers/compile.mjs";
-import getAssetsNameAndSize from "./helpers/getAssetsNameAndSize.mjs";
-import getCompiler from "./helpers/getCompiler.mjs";
-import getErrors from "./helpers/getErrors.mjs";
-import getWarnings from "./helpers/getWarnings.mjs";
+import compile from "./helpers/compile.ts";
+import getAssetsNameAndSize from "./helpers/getAssetsNameAndSize.ts";
+import getCompiler from "./helpers/getCompiler.ts";
+import getErrors from "./helpers/getErrors.ts";
+import getWarnings from "./helpers/getWarnings.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-describe('"exclude" option', () => {
+describe('"include" option', () => {
   let compiler;
 
   beforeEach(() => {
@@ -28,9 +28,9 @@ describe('"exclude" option', () => {
     );
   });
 
-  it("matches snapshot for a single `exclude` value ({RegExp})", async () => {
+  it("matches snapshot for a single `include` value ({RegExp})", async () => {
     new CompressionRspackPlugin({
-      exclude: /\.svg(\?.*)?$/i,
+      include: /\.js(\?.*)?$/i,
       minRatio: 1,
     }).apply(compiler);
 
@@ -41,9 +41,9 @@ describe('"exclude" option', () => {
     expect(getErrors(stats)).toMatchSnapshot("errors");
   });
 
-  it("matches snapshot for multiple `exclude` values ({Array<RegExp>})", async () => {
+  it("matches snapshot for multiple `include` values ({Array<RegExp>})", async () => {
     new CompressionRspackPlugin({
-      exclude: [/\.svg(\?.*)?$/i, /\.png(\?.*)?$/i],
+      include: [/\.js(\?.*)?$/i, /\.svg(\?.*)?$/i],
       minRatio: 1,
     }).apply(compiler);
 

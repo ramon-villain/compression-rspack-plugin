@@ -35,7 +35,6 @@
     "build": "pnpm build:native && pnpm build:ts",
     "clean": "rm -rf dist",
     "test:rust": "cargo test --lib",
-    "pretest": "pnpm build:ts",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
     "test:update": "NODE_OPTIONS='--experimental-vm-modules' jest -u",
     "typecheck": "tsc --noEmit",
@@ -72,8 +71,8 @@
   "optionalDependencies": {
     "compression-rspack-plugin-darwin-arm64": "0.1.2",
     "compression-rspack-plugin-darwin-x64": "0.1.2",
-    "compression-rspack-plugin-linux-x64-gnu": "0.1.2",
     "compression-rspack-plugin-linux-arm64-gnu": "0.1.2",
+    "compression-rspack-plugin-linux-x64-gnu": "0.1.2",
     "compression-rspack-plugin-linux-x64-musl": "0.1.2"
   },
   "dependencies": {
@@ -84,6 +83,8 @@
     "@biomejs/biome": "2.4.9",
     "@napi-rs/cli": "3.0.0-alpha.86",
     "@rspack/core": "2.0.0-beta.2",
+    "@swc/core": "^1.15.21",
+    "@swc/jest": "^0.2.39",
     "@types/node": "24.11.0",
     "browserslist-load-config": "1.0.1",
     "jest": "30.0.0-alpha.6",

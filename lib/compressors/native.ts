@@ -40,9 +40,14 @@ export const compressNativeBinding = (
     throw new Error("Algorithm is not a string");
   }
 
-  return async (eligible) =>
-    nativeBinding.compressAssets(eligible, {
-      algorithm,
-      level: extractLevel(algorithm, compressionOptions),
-    });
+  const level = extractLevel(algorithm, compressionOptions);
+
+  return async (eligible, compilation) => {
+    try {
+      return nativeBinding.compressAssets(eligible, { algorithm, level });
+    } catch (error) {
+      compilation.errors.push(error instanceof Error ? error : new Error(String(error)));
+      return [];
+    }
+  };
 };

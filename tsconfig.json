@@ -13,6 +13,6 @@
     "verbatimModuleSyntax": true,
     "types": ["node"]
   },
-  "include": ["lib/**/*.ts"],
-  "exclude": ["node_modules", "dist", "test"]
+  "include": ["lib/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

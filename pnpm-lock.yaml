@@ -24,6 +24,12 @@ importers:
       '@rspack/core':
         specifier: 2.0.0-beta.2
         version: 2.0.0-beta.2
+      '@swc/core':
+        specifier: ^1.15.21
+        version: 1.15.21
+      '@swc/jest':
+        specifier: ^0.2.39
+        version: 0.2.39(@swc/core@1.15.21)
       '@types/node':
         specifier: 24.11.0
         version: 24.11.0
@@ -42,6 +48,22 @@ importers:
       webpack-stats-plugin:
         specifier: 1.1.3
         version: 1.1.3
+    optionalDependencies:
+      compression-rspack-plugin-darwin-arm64:
+        specifier: 0.1.2
+        version: 0.1.2
+      compression-rspack-plugin-darwin-x64:
+        specifier: 0.1.2
+        version: 0.1.2
+      compression-rspack-plugin-linux-arm64-gnu:
+        specifier: 0.1.2
+        version: 0.1.2
+      compression-rspack-plugin-linux-x64-gnu:
+        specifier: 0.1.2
+        version: 0.1.2
+      compression-rspack-plugin-linux-x64-musl:
+        specifier: 0.1.2
+        version: 0.1.2
 
 packages:
 
@@ -431,6 +453,10 @@ packages:
       node-notifier:
         optional: true
 
+  '@jest/create-cache-key-function@30.3.0':
+    resolution: {integrity: sha512-hTupmOWylzeyqbMNeSNi7ZDprpjrcroAOOG+qCEW66st3+Z5RnYHVYkUt+zjIcLmrTUi2lPY79hJz8mB3L2oXQ==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+
   '@jest/environment@30.0.0-alpha.6':
     resolution: {integrity: sha512-pjNYNkzq761hh8D2grrG77L6nhe2VBCFFM+G1hyqhaJ2MAzhp2Gh+G94uF3px7luSzLh8GYvGJQGYy197EUOGQ==}
     engines: {node: ^16.10.0 || ^18.12.0 || >=20.0.0}
@@ -455,6 +481,10 @@ packages:
     resolution: {integrity: sha512-eoV3sjS1M5k3YdrFWezqdndfgepwB86gwyXC0BzV2saZdJ42ySUoEDBGKuwta8A6Zh3w8tVHNFxz1BqiFraHCQ==}
     engines: {node: ^16.10.0 || ^18.12.0 || >=20.0.0}
 
+  '@jest/pattern@30.0.1':
+    resolution: {integrity: sha512-gWp7NfQW27LaBQz3TITS8L7ZCQ0TLvtmI//4OwlQRx4rnWxcPNIYjxZpDcN4+UlGxgm3jS5QPz8IPTCkb59wZA==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+
   '@jest/reporters@30.0.0-alpha.6':
     resolution: {integrity: sha512-jzW0t2OtEzBYwlG4EMJKG4q5RPaVvLPDm/nBS08hd+XPoLJJ9b5thyo/MoThIqJfdi0lHqFlDQUmlL205CMoSw==}
     engines: {node: ^16.10.0 || ^18.12.0 || >=20.0.0}
@@ -467,6 +497,10 @@ packages:
   '@jest/schemas@30.0.0-alpha.6':
     resolution: {integrity: sha512-Ukr3kR/VsBq8+JHU92xArhSJeFQHVHs5T1laPO00GrrNzv3DvoHn3/EVVagGn9CHbLeAyJHXFRHYxq3+520kiA==}
     engines: {node: ^16.10.0 || ^18.12.0 || >=20.0.0}
+
+  '@jest/schemas@30.0.5':
+    resolution: {integrity: sha512-DmdYgtezMkh3cpU8/1uyXakv3tJRcmcXxBOcO0tbaozPwpmh4YMsnWrQm9ZmZMfa5ocbxzbFk6O4bDPEc/iAnA==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
 
   '@jest/snapshot-utils@30.0.0-alpha.6':
     resolution: {integrity: sha512-iDtIFCyRT8ZyLmz6kYbS8GR/MBXKA6uZPBfdTcnd2y0T987DV3GVlvwkAC+iFTc1w3HgwQe8LTf+y3i+O2ISCw==}
@@ -491,6 +525,10 @@ packages:
   '@jest/types@30.0.0-alpha.6':
     resolution: {integrity: sha512-qUjAm8uvIR7oExn/Fp7/bvn58HSZng5itQDM9x0vaxXWxxGH/8MDmqX/h7OUBz9ka+KfYRaTxe4Y6wiM8+nphw==}
     engines: {node: ^16.10.0 || ^18.12.0 || >=20.0.0}
+
+  '@jest/types@30.3.0':
+    resolution: {integrity: sha512-JHm87k7bA33hpBngtU8h6UBub/fqqA9uXfw+21j5Hmk7ooPHlboRNxHq0JcMtC+n8VJGP1mcfnD3Mk+XKe1oSw==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -1001,11 +1039,107 @@ packages:
   '@sinclair/typebox@0.33.22':
     resolution: {integrity: sha512-auUj4k+f4pyrIVf4GW5UKquSZFHJWri06QgARy9C0t9ZTjJLIuNIrr1yl9bWcJWJ1Gz1vOvYN1D+QPaIlNMVkQ==}
 
+  '@sinclair/typebox@0.34.49':
+    resolution: {integrity: sha512-brySQQs7Jtn0joV8Xh9ZV/hZb9Ozb0pmazDIASBkYKCjXrXU3mpcFahmK/z4YDhGkQvP9mWJbVyahdtU5wQA+A==}
+
   '@sinonjs/commons@3.0.1':
     resolution: {integrity: sha512-K3mCHKQ9sVh8o1C9cxkwxaOmXoAMlDxC1mYyHrjqOWEcBjYr76t96zL2zlj5dUGZ3HSw240X1qgH3Mjf1yJWpQ==}
 
   '@sinonjs/fake-timers@11.3.1':
     resolution: {integrity: sha512-EVJO7nW5M/F5Tur0Rf2z/QoMo+1Ia963RiMtapiQrEWvY0iBUvADo8Beegwjpnle5BHkyHuoxSTW3jF43H1XRA==}
+
+  '@swc/core-darwin-arm64@1.15.21':
+    resolution: {integrity: sha512-SA8SFg9dp0qKRH8goWsax6bptFE2EdmPf2YRAQW9WoHGf3XKM1bX0nd5UdwxmC5hXsBUZAYf7xSciCler6/oyA==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@swc/core-darwin-x64@1.15.21':
+    resolution: {integrity: sha512-//fOVntgowz9+V90lVsNCtyyrtbHp3jWH6Rch7MXHXbcvbLmbCTmssl5DeedUWLLGiAAW1wksBdqdGYOTjaNLw==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@swc/core-linux-arm-gnueabihf@1.15.21':
+    resolution: {integrity: sha512-meNI4Sh6h9h8DvIfEc0l5URabYMSuNvyisLmG6vnoYAS43s8ON3NJR8sDHvdP7NJTrLe0q/x2XCn6yL/BeHcZg==}
+    engines: {node: '>=10'}
+    cpu: [arm]
+    os: [linux]
+
+  '@swc/core-linux-arm64-gnu@1.15.21':
+    resolution: {integrity: sha512-QrXlNQnHeXqU2EzLlnsPoWEh8/GtNJLvfMiPsDhk+ht6Xv8+vhvZ5YZ/BokNWSIZiWPKLAqR0M7T92YF5tmD3g==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@swc/core-linux-arm64-musl@1.15.21':
+    resolution: {integrity: sha512-8/yGCMO333ultDaMQivE5CjO6oXDPeeg1IV4sphojPkb0Pv0i6zvcRIkgp60xDB+UxLr6VgHgt+BBgqS959E9g==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@swc/core-linux-ppc64-gnu@1.15.21':
+    resolution: {integrity: sha512-ucW0HzPx0s1dgRvcvuLSPSA/2Kk/VYTv9st8qe1Kc22Gu0Q0rH9+6TcBTmMuNIp0Xs4BPr1uBttmbO1wEGI49Q==}
+    engines: {node: '>=10'}
+    cpu: [ppc64]
+    os: [linux]
+
+  '@swc/core-linux-s390x-gnu@1.15.21':
+    resolution: {integrity: sha512-ulTnOGc5I7YRObE/9NreAhQg94QkiR5qNhhcUZ1iFAYjzg/JGAi1ch+s/Ixe61pMIr8bfVrF0NOaB0f8wjaAfA==}
+    engines: {node: '>=10'}
+    cpu: [s390x]
+    os: [linux]
+
+  '@swc/core-linux-x64-gnu@1.15.21':
+    resolution: {integrity: sha512-D0RokxtM+cPvSqJIKR6uja4hbD+scI9ezo95mBhfSyLUs9wnPPl26sLp1ZPR/EXRdYm3F3S6RUtVi+8QXhT24Q==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@swc/core-linux-x64-musl@1.15.21':
+    resolution: {integrity: sha512-nER8u7VeRfmU6fMDzl1NQAbbB/G7O2avmvCOwIul1uGkZ2/acbPH+DCL9h5+0yd/coNcxMBTL6NGepIew+7C2w==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@swc/core-win32-arm64-msvc@1.15.21':
+    resolution: {integrity: sha512-+/AgNBnjYugUA8C0Do4YzymgvnGbztv7j8HKSQLvR/DQgZPoXQ2B3PqB2mTtGh/X5DhlJWiqnunN35JUgWcAeQ==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@swc/core-win32-ia32-msvc@1.15.21':
+    resolution: {integrity: sha512-IkSZj8PX/N4HcaFhMQtzmkV8YSnuNoJ0E6OvMwFiOfejPhiKXvl7CdDsn1f4/emYEIDO3fpgZW9DTaCRMDxaDA==}
+    engines: {node: '>=10'}
+    cpu: [ia32]
+    os: [win32]
+
+  '@swc/core-win32-x64-msvc@1.15.21':
+    resolution: {integrity: sha512-zUyWso7OOENB6e1N1hNuNn8vbvLsTdKQ5WKLgt/JcBNfJhKy/6jmBmqI3GXk/MyvQKd5SLvP7A0F36p7TeDqvw==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [win32]
+
+  '@swc/core@1.15.21':
+    resolution: {integrity: sha512-fkk7NJcBscrR3/F8jiqlMptRHP650NxqDnspBMrRe5d8xOoCy9MLL5kOBLFXjFLfMo3KQQHhk+/jUULOMlR1uQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@swc/helpers': '>=0.5.17'
+    peerDependenciesMeta:
+      '@swc/helpers':
+        optional: true
+
+  '@swc/counter@0.1.3':
+    resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
+
+  '@swc/jest@0.2.39':
+    resolution: {integrity: sha512-eyokjOwYd0Q8RnMHri+8/FS1HIrIUKK/sRrFp8c1dThUOfNeCWbLmBP1P5VsKdvmkd25JaH+OKYwEYiAYg9YAA==}
+    engines: {npm: '>= 7.0.0'}
+    peerDependencies:
+      '@swc/core': '*'
+
+  '@swc/types@0.1.26':
+    resolution: {integrity: sha512-lyMwd7WGgG79RS7EERZV3T8wMdmPq3xwyg+1nmAM64kIhx5yl+juO2PYIHb7vTiPgPCj8LYjsNV2T5wiQHUEaw==}
 
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
@@ -1221,6 +1355,36 @@ packages:
 
   colorette@2.0.20:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
+
+  compression-rspack-plugin-darwin-arm64@0.1.2:
+    resolution: {integrity: sha512-gUiPe5NZEyXwR1ERDud7P3O2LVdNUSdd1WWQWk7CSH3/b0JGX2zGxczRKgHSPc8pSqCCmrFmIzQmeNam0tMuqQ==}
+    engines: {node: '>=24'}
+    cpu: [arm64]
+    os: [darwin]
+
+  compression-rspack-plugin-darwin-x64@0.1.2:
+    resolution: {integrity: sha512-YdkOd8ey8wL4HMAJZ2HDW1H2T35DgxUhjsUFGZfYCOYmG66/Q3llNTcq9iPjPe5WdNplxMShcLS9Ut3dycyRFg==}
+    engines: {node: '>=24'}
+    cpu: [x64]
+    os: [darwin]
+
+  compression-rspack-plugin-linux-arm64-gnu@0.1.2:
+    resolution: {integrity: sha512-TZsUYexvVWk2CUEb5OkDi0M/VrWribg5E8KgJ7kneH2gmulhYViKE9incH7ZyFhs0vwc/reT0h2wmU6Mu1BtDg==}
+    engines: {node: '>=24'}
+    cpu: [arm64]
+    os: [linux]
+
+  compression-rspack-plugin-linux-x64-gnu@0.1.2:
+    resolution: {integrity: sha512-akDsZvMrFAhlnhch2lluQtfeQCidMzV/25WA4smjKF2/JY7Hyps7sFVF1AP2qrP9fR1AvrAc8hRQqq3RdLWc4A==}
+    engines: {node: '>=24'}
+    cpu: [x64]
+    os: [linux]
+
+  compression-rspack-plugin-linux-x64-musl@0.1.2:
+    resolution: {integrity: sha512-PIEecveEnynxaUVbQzEiZTdDuiGXRRbXPjBTqTKUH4KIOkD3h9EdHaqJZttHDm4UAIzqo/vYQXYsmia/LXfbSQ==}
+    engines: {node: '>=24'}
+    cpu: [x64]
+    os: [linux]
 
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -1545,6 +1709,10 @@ packages:
     resolution: {integrity: sha512-XcsAVaqc69QyMz1/FChyhWSoAMaKcDPhFOuWJz/H51LppsyZRAJPXkPnMopsS+qfut8cggExr9QLcsYaX6hqqA==}
     engines: {node: ^16.10.0 || ^18.12.0 || >=20.0.0}
 
+  jest-regex-util@30.0.1:
+    resolution: {integrity: sha512-jHEQgBXAgc+Gh4g0p3bCevgRCVRkB4VB70zhoAE48gxeSr1hfUOsM/C2WoJgVL7Eyg//hudYENbm3Ne+/dRVVA==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+
   jest-resolve-dependencies@30.0.0-alpha.6:
     resolution: {integrity: sha512-G+st0nBR4FNIvVCHq8YNJBiG6t7u0+cxM099lbtOoJNJU+ZTdIxSyzPnnmp/C+YHd1QOlDNlplvL+xe1KHhPUA==}
     engines: {node: ^16.10.0 || ^18.12.0 || >=20.0.0}
@@ -1620,6 +1788,9 @@ packages:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
     hasBin: true
+
+  jsonc-parser@3.3.1:
+    resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
 
   leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
@@ -2455,6 +2626,10 @@ snapshots:
       - supports-color
       - ts-node
 
+  '@jest/create-cache-key-function@30.3.0':
+    dependencies:
+      '@jest/types': 30.3.0
+
   '@jest/environment@30.0.0-alpha.6':
     dependencies:
       '@jest/fake-timers': 30.0.0-alpha.6
@@ -2496,6 +2671,11 @@ snapshots:
       '@types/node': 24.11.0
       jest-regex-util: 30.0.0-alpha.6
 
+  '@jest/pattern@30.0.1':
+    dependencies:
+      '@types/node': 24.11.0
+      jest-regex-util: 30.0.1
+
   '@jest/reporters@30.0.0-alpha.6':
     dependencies:
       '@bcoe/v8-coverage': 0.2.3
@@ -2528,6 +2708,10 @@ snapshots:
   '@jest/schemas@30.0.0-alpha.6':
     dependencies:
       '@sinclair/typebox': 0.33.22
+
+  '@jest/schemas@30.0.5':
+    dependencies:
+      '@sinclair/typebox': 0.34.49
 
   '@jest/snapshot-utils@30.0.0-alpha.6':
     dependencies:
@@ -2580,6 +2764,16 @@ snapshots:
     dependencies:
       '@jest/pattern': 30.0.0-alpha.6
       '@jest/schemas': 30.0.0-alpha.6
+      '@types/istanbul-lib-coverage': 2.0.6
+      '@types/istanbul-reports': 3.0.4
+      '@types/node': 24.11.0
+      '@types/yargs': 17.0.35
+      chalk: 4.1.2
+
+  '@jest/types@30.3.0':
+    dependencies:
+      '@jest/pattern': 30.0.1
+      '@jest/schemas': 30.0.5
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
       '@types/node': 24.11.0
@@ -3015,6 +3209,8 @@ snapshots:
 
   '@sinclair/typebox@0.33.22': {}
 
+  '@sinclair/typebox@0.34.49': {}
+
   '@sinonjs/commons@3.0.1':
     dependencies:
       type-detect: 4.0.8
@@ -3022,6 +3218,73 @@ snapshots:
   '@sinonjs/fake-timers@11.3.1':
     dependencies:
       '@sinonjs/commons': 3.0.1
+
+  '@swc/core-darwin-arm64@1.15.21':
+    optional: true
+
+  '@swc/core-darwin-x64@1.15.21':
+    optional: true
+
+  '@swc/core-linux-arm-gnueabihf@1.15.21':
+    optional: true
+
+  '@swc/core-linux-arm64-gnu@1.15.21':
+    optional: true
+
+  '@swc/core-linux-arm64-musl@1.15.21':
+    optional: true
+
+  '@swc/core-linux-ppc64-gnu@1.15.21':
+    optional: true
+
+  '@swc/core-linux-s390x-gnu@1.15.21':
+    optional: true
+
+  '@swc/core-linux-x64-gnu@1.15.21':
+    optional: true
+
+  '@swc/core-linux-x64-musl@1.15.21':
+    optional: true
+
+  '@swc/core-win32-arm64-msvc@1.15.21':
+    optional: true
+
+  '@swc/core-win32-ia32-msvc@1.15.21':
+    optional: true
+
+  '@swc/core-win32-x64-msvc@1.15.21':
+    optional: true
+
+  '@swc/core@1.15.21':
+    dependencies:
+      '@swc/counter': 0.1.3
+      '@swc/types': 0.1.26
+    optionalDependencies:
+      '@swc/core-darwin-arm64': 1.15.21
+      '@swc/core-darwin-x64': 1.15.21
+      '@swc/core-linux-arm-gnueabihf': 1.15.21
+      '@swc/core-linux-arm64-gnu': 1.15.21
+      '@swc/core-linux-arm64-musl': 1.15.21
+      '@swc/core-linux-ppc64-gnu': 1.15.21
+      '@swc/core-linux-s390x-gnu': 1.15.21
+      '@swc/core-linux-x64-gnu': 1.15.21
+      '@swc/core-linux-x64-musl': 1.15.21
+      '@swc/core-win32-arm64-msvc': 1.15.21
+      '@swc/core-win32-ia32-msvc': 1.15.21
+      '@swc/core-win32-x64-msvc': 1.15.21
+
+  '@swc/counter@0.1.3': {}
+
+  '@swc/jest@0.2.39(@swc/core@1.15.21)':
+    dependencies:
+      '@jest/create-cache-key-function': 30.3.0
+      '@swc/core': 1.15.21
+      '@swc/counter': 0.1.3
+      jsonc-parser: 3.3.1
+
+  '@swc/types@0.1.26':
+    dependencies:
+      '@swc/counter': 0.1.3
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
@@ -3251,6 +3514,21 @@ snapshots:
   color-name@1.1.4: {}
 
   colorette@2.0.20: {}
+
+  compression-rspack-plugin-darwin-arm64@0.1.2:
+    optional: true
+
+  compression-rspack-plugin-darwin-x64@0.1.2:
+    optional: true
+
+  compression-rspack-plugin-linux-arm64-gnu@0.1.2:
+    optional: true
+
+  compression-rspack-plugin-linux-x64-gnu@0.1.2:
+    optional: true
+
+  compression-rspack-plugin-linux-x64-musl@0.1.2:
+    optional: true
 
   concat-map@0.0.1: {}
 
@@ -3625,6 +3903,8 @@ snapshots:
 
   jest-regex-util@30.0.0-alpha.6: {}
 
+  jest-regex-util@30.0.1: {}
+
   jest-resolve-dependencies@30.0.0-alpha.6:
     dependencies:
       jest-regex-util: 30.0.0-alpha.6
@@ -3793,6 +4073,8 @@ snapshots:
   json-with-bigint@3.5.8: {}
 
   json5@2.2.3: {}
+
+  jsonc-parser@3.3.1: {}
 
   leven@3.1.0: {}
 

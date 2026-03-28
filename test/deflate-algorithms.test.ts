@@ -1,12 +1,12 @@
 import zlib from "node:zlib";
 
-import { CompressionRspackPlugin } from "../dist/index.js";
+import { CompressionRspackPlugin } from "../lib/index.ts";
 
-import compile from "./helpers/compile.mjs";
-import getAssetsNameAndSize from "./helpers/getAssetsNameAndSize.mjs";
-import getCompiler from "./helpers/getCompiler.mjs";
-import getErrors from "./helpers/getErrors.mjs";
-import getWarnings from "./helpers/getWarnings.mjs";
+import compile from "./helpers/compile.ts";
+import getAssetsNameAndSize from "./helpers/getAssetsNameAndSize.ts";
+import getCompiler from "./helpers/getCompiler.ts";
+import getErrors from "./helpers/getErrors.ts";
+import getWarnings from "./helpers/getWarnings.ts";
 
 describe('"deflate" and "deflateRaw" algorithms', () => {
   it('should work with "deflate" algorithm (native Rust)', async () => {
