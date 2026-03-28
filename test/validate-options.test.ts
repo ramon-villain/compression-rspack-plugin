@@ -56,16 +56,16 @@ describe("validate options", () => {
 
   for (const [key, values] of Object.entries(tests)) {
     for (const type of Object.keys(values)) {
-      for (const value of values[type]) {
+      for (const value of (values as Record<string, unknown[]>)[type]) {
         it(`should ${
           type === "success" ? "successfully validate" : "throw an error on"
         } the "${key}" option with "${stringifyValue(value)}" value`, () => {
-          let error;
+          let error: unknown;
 
           try {
             new CompressionRspackPlugin({ [key]: value });
-          } catch (err) {
-            if (err.name !== "ValidationError") {
+          } catch (err: unknown) {
+            if (err instanceof Error && err.name !== "ValidationError") {
               throw err;
             }
             error = err;
