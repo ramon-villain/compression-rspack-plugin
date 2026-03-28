@@ -4,17 +4,6 @@ Rust-native parallel compression plugin for [Rspack](https://rspack.dev). Drop-i
 
 Compresses assets **in parallel** across all CPU cores via Rust + [rayon](https://github.com/rayon-rs/rayon), instead of serially on the Node.js main thread.
 
-## Benchmarks
-
-Tested on a production Rspack build (~1,400 assets, Apple M3 Pro 14-core).
-
-| | compression-webpack-plugin | compression-rspack-plugin |
-|---|---|---|
-| **Build time** (avg of 3) | 82.7s | **37.3s** (2.2x faster) |
-| **Compression phase** (RsDoctor) | 61.1s | **20.3s** (3.0x faster) |
-| .gz files | 1,410 | 1,411 |
-| .br files | 1,444 | 1,444 |
-
 ## Install
 
 ```bash
@@ -56,6 +45,17 @@ Same interface as [compression-webpack-plugin](https://github.com/webpack/compre
 | `minRatio` | `number` | `0.8` | Only emit if compressed/original < this |
 | `deleteOriginalAssets` | `boolean \| "keep-source-map" \| Function` | `false` | Remove originals after compression |
 
+## Benchmarks
+
+Tested on a production Rspack build (~1,400 assets, Apple M3 Pro 14-core).
+
+| | compression-webpack-plugin | compression-rspack-plugin |
+|---|---|---|
+| **Build time** (avg of 3) | 82.7s | **37.3s** (2.2x faster) |
+| **Compression phase** (RsDoctor) | 61.1s | **20.3s** (3.0x faster) |
+| .gz files | 1,410 | 1,411 |
+| .br files | 1,444 | 1,444 |
+
 ## How it works
 
 Built-in algorithms (`gzip`, `brotliCompress`, `deflate`, `deflateRaw`) are handled by [flate2](https://github.com/rust-lang/flate2-rs) and [brotli](https://github.com/dropbox/rust-brotli) in Rust via a single napi-rs FFI call. Custom algorithms fall back to Node.js `zlib`.
@@ -74,7 +74,7 @@ Built-in algorithms (`gzip`, `brotliCompress`, `deflate`, `deflateRaw`) are hand
 ```bash
 pnpm install        # install deps
 pnpm build          # native addon + TypeScript
-pnpm test           # JS tests (118 tests)
+pnpm test           # JS tests (120 tests)
 pnpm test:rust      # Rust unit tests
 pnpm lint           # biome
 pnpm lint:rs        # cargo fmt + clippy
