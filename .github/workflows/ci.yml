@@ -33,7 +33,7 @@ jobs:
           node-version: 24
           cache: pnpm
 
-      - run: pnpm install
+      - run: pnpm install --no-frozen-lockfile
       - run: pnpm build:native
       - run: pnpm build:ts
       - run: NODE_OPTIONS='--experimental-vm-modules' pnpm exec jest --no-cache
@@ -52,7 +52,7 @@ jobs:
           node-version: 24
           cache: pnpm
 
-      - run: pnpm install
+      - run: pnpm install --no-frozen-lockfile
       - run: cargo fmt --check
       - run: cargo clippy --lib -- -D warnings
       - run: pnpm typecheck

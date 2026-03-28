@@ -1,0 +1,36 @@
+{
+  "name": "compression-rspack-plugin-darwin-x64",
+  "version": "0.1.0",
+  "cpu": [
+    "x64"
+  ],
+  "main": "compression-rspack-plugin.darwin-x64.node",
+  "files": [
+    "compression-rspack-plugin.darwin-x64.node"
+  ],
+  "description": "Rust-native parallel compression plugin for Rspack. Drop-in replacement for compression-webpack-plugin with gzip, brotli, deflate, and deflateRaw — all parallelized across CPU cores via Rust + rayon.",
+  "keywords": [
+    "rspack",
+    "rspack-plugin",
+    "compression",
+    "gzip",
+    "brotli",
+    "deflate",
+    "rust",
+    "napi",
+    "parallel",
+    "performance"
+  ],
+  "author": "ramon-villain",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramon-villain/compression-rspack-plugin.git"
+  },
+  "os": [
+    "darwin"
+  ]
+}
