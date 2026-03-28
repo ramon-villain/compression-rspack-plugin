@@ -18,10 +18,14 @@ Tested on a production Rspack build (~1,400 assets, Apple M3 Pro 14-core).
 ## Install
 
 ```bash
+npm install compression-rspack-plugin
+# or
 pnpm add compression-rspack-plugin
+# or
+yarn add compression-rspack-plugin
 ```
 
-Requires Rust toolchain (`rustc`, `cargo`) for the native addon. Install via [rustup](https://rustup.rs).
+Prebuilt binaries are available for macOS (arm64, x64), Linux (x64 glibc, arm64 glibc, x64 musl). The correct binary is installed automatically via platform-specific optional dependencies.
 
 ## Usage
 
