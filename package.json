@@ -42,7 +42,8 @@
     "lint:fix": "biome check --write .",
     "lint:rs": "cargo fmt --check && cargo clippy --lib -- -D warnings",
     "prepublishOnly": "pnpm clean && pnpm build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "bash scripts/release.sh"
   },
   "keywords": [
     "rspack",
