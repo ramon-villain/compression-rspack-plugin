@@ -1,5 +1,7 @@
 # compression-rspack-plugin
 
+[![npm version](https://img.shields.io/npm/v/compression-rspack-plugin)](https://www.npmjs.com/package/compression-rspack-plugin) [![CI](https://github.com/ramon-villain/compression-rspack-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/ramon-villain/compression-rspack-plugin/actions/workflows/ci.yml) [![license](https://img.shields.io/npm/l/compression-rspack-plugin)](LICENSE) [![npm downloads](https://img.shields.io/npm/dm/compression-rspack-plugin)](https://www.npmjs.com/package/compression-rspack-plugin) [![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)]() [![awesome-rstack](https://img.shields.io/badge/awesome-rstack-blue)](https://github.com/rstackjs/awesome-rstack)
+
 Rust-native parallel compression plugin for [Rspack](https://rspack.dev). Drop-in replacement for [compression-webpack-plugin](https://github.com/webpack/compression-webpack-plugin).
 
 Compresses assets **in parallel** across all CPU cores via Rust + [rayon](https://github.com/rayon-rs/rayon), instead of serially on the Node.js main thread.
