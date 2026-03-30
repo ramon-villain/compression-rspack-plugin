@@ -10,7 +10,7 @@ repository = "https://github.com/ramon-villain/compression-rspack-plugin"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-flate2 = "1.1"
+flate2 = { version = "1.1", features = ["zlib-ng"], default-features = false }
 brotli = "8.0"
 rayon = { version = "1.11.0", default-features = false }
 napi = { version = "3.8.3", features = ["napi8"] }

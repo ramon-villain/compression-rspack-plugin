@@ -1,5 +1,5 @@
+use std::fmt;
 use std::io::{Cursor, Write};
-use std::sync::Arc;
 
 use brotli::enc::backward_references::BrotliEncoderParams;
 use brotli::enc::BrotliCompress;
@@ -38,7 +38,23 @@ enum Algorithm {
   DeflateRaw,
 }
 
+impl fmt::Display for Algorithm {
+  fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+    f.write_str(match self {
+      Self::Gzip => "gzip",
+      Self::Brotli => "brotli",
+      Self::Deflate => "deflate",
+      Self::DeflateRaw => "deflateRaw",
+    })
+  }
+}
+
 impl Algorithm {
+  /// Build a napi error lazily -- `format!` only runs if the error is constructed.
+  fn compression_error(self, source: impl fmt::Display) -> Error {
+    Error::new(Status::GenericFailure, format!("{self} failed: {source}"))
+  }
+
   fn compress(
     self,
     input: &[u8],
@@ -51,12 +67,12 @@ impl Algorithm {
         enc
           .write_all(input)
           .and_then(|_| enc.finish())
-          .map_err(|e| Error::new(Status::GenericFailure, format!("gzip failed: {e}")))
+          .map_err(|e| self.compression_error(e))
       }
       Self::Brotli => {
         let mut output = Vec::with_capacity(input.len() / 2);
         BrotliCompress(&mut Cursor::new(input), &mut output, brotli_params)
-          .map_err(|e| Error::new(Status::GenericFailure, format!("brotli failed: {e}")))?;
+          .map_err(|e| self.compression_error(e))?;
         Ok(output)
       }
       // ZlibEncoder produces zlib-wrapped output (RFC 1950), matching Node's zlib.deflate
@@ -66,7 +82,7 @@ impl Algorithm {
         enc
           .write_all(input)
           .and_then(|_| enc.finish())
-          .map_err(|e| Error::new(Status::GenericFailure, format!("deflate failed: {e}")))
+          .map_err(|e| self.compression_error(e))
       }
       Self::DeflateRaw => {
         let mut enc =
@@ -74,7 +90,7 @@ impl Algorithm {
         enc
           .write_all(input)
           .and_then(|_| enc.finish())
-          .map_err(|e| Error::new(Status::GenericFailure, format!("deflateRaw failed: {e}")))
+          .map_err(|e| self.compression_error(e))
       }
     }
   }
@@ -118,7 +134,7 @@ fn validate_level(algorithm: &str, level: u32) -> napi::Result<()> {
 fn compress_all(
   assets: Vec<AssetInput>,
   algo: Algorithm,
-  algo_name: Arc<str>,
+  algo_name: String,
   level: u32,
 ) -> napi::Result<Vec<CompressedAsset>> {
   let brotli_params = BrotliEncoderParams {
@@ -136,7 +152,7 @@ fn compress_all(
       Ok(CompressedAsset {
         name: asset.name,
         buffer: compressed.into(),
-        algorithm: algo_name.to_string(),
+        algorithm: algo_name.clone(),
         original_size,
         compressed_size,
       })
@@ -156,9 +172,8 @@ pub fn compress_assets(
   validate_level(&options.algorithm, level)?;
 
   let algo = resolve_algorithm(&options.algorithm)?;
-  let algo_name: Arc<str> = Arc::from(options.algorithm.as_str());
 
-  compress_all(assets, algo, algo_name, level)
+  compress_all(assets, algo, options.algorithm, level)
 }
 
 #[cfg(test)]

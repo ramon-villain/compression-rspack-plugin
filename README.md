@@ -55,6 +55,10 @@ Tested on a production Rspack build (~1,400 assets, Apple M3 Pro 14-core).
 | **Compression phase** (RsDoctor) | 61.1s | **20.3s** (3.0x faster) |
 | .gz files | 1,410 | 1,411 |
 | .br files | 1,444 | 1,444 |
+| gzip-6 / 1 KB | 106 MiB/s | 143 MiB/s (1.4x) |
+| gzip-6 / 100 KB | 0.66 GiB/s | 2.77 GiB/s (4.2x) |
+| gzip-6 / 1 MB | 0.66 GiB/s | 3.30 GiB/s (5.0x) |
+| deflate-6 / 1 MB | 0.69 GiB/s | 2.03 GiB/s (2.9x) |
 
 ## How it works
 
